@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onbeforeunload</title>
+</head>
+<body class="yui-skin-sam" onbeforeunload="document.onFormClose();">
+    
+</body>
+<script>
+    document.onFormClose = function () {
+        if (document.getElementById('DirtyFlag').value == "true") {
+            document.getElementById('DirtyFlag').value == "false";
+            return 'You will lose all changes made since your last save';
+        }
+    }
+</script>
+</html>
